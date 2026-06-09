@@ -3,7 +3,7 @@ import "./Navbar.css"
 import { CircleUserRound } from 'lucide-react';
 import { X } from 'lucide-react';
 import { Menu } from 'lucide-react';
-import MobileLinks from './MobileLinks';
+import { Plus } from 'lucide-react';
 const Navbar = () => {
     const [hamburger, setHamburger] = useState(false)
 
@@ -34,7 +34,7 @@ const Navbar = () => {
             path: "/mmc-care",
         },
     ];
-    
+
     return (
         <>
             <nav className='navbar'>
@@ -64,11 +64,44 @@ const Navbar = () => {
                                     <X />
                                 </div>
                             </div>
-                            <div>
-                                <MobileLinks />
-                                <div className='footer-links'>
-                                    <a href="/">MMC</a>
-                                </div>
+                            <div className='mob-links'>
+                                <ul>
+                                    <div>
+                                        <li><a href="/">About Us</a></li>
+                                        <li><Plus /></li>
+                                    </div>
+
+                                    <div>
+                                        <li><a href="/">Vehicels</a></li>
+                                        <li><Plus /></li>
+                                    </div>
+
+                                    <div>
+                                        <li><a href="/">Technologies</a></li>
+                                        <li><Plus /></li>
+                                    </div>
+
+                                    <div>
+                                        <li><a href="/">Experience</a></li>
+                                        <li><Plus /></li>
+                                    </div>
+
+                                    <div>
+                                        <li><a href="/">MMC Care</a></li>
+                                    </div>
+
+                                    <div className='user-icon'>
+                                        <li>
+                                            <a href="/">
+                                                <CircleUserRound /> Login
+                                            </a>
+                                        </li>
+                                    </div>
+
+                                    <div>
+                                        <li><a href="/">Dealership Application</a></li>
+                                    </div>
+                                </ul>
                             </div>
                         </div>
                     }
