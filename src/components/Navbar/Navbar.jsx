@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Navbar.css"
 import { CircleUserRound } from 'lucide-react';
+import { X } from 'lucide-react';
 import { Menu } from 'lucide-react';
+import MobileLinks from './MobileLinks';
 const Navbar = () => {
+    const [hamburger, setHamburger] = useState(false)
+
     const navLinks = [
         {
             id: 1,
@@ -11,7 +15,7 @@ const Navbar = () => {
         },
         {
             id: 2,
-            title: "Home",
+            title: "Vehicles",
             path: "/",
         },
         {
@@ -30,6 +34,7 @@ const Navbar = () => {
             path: "/mmc-care",
         },
     ];
+    
     return (
         <>
             <nav className='navbar'>
@@ -47,9 +52,28 @@ const Navbar = () => {
                     <button> <CircleUserRound strokeWidth={1.2} color='white' />DEALERSHIP APPLICATION</button>
                 </div>
 
-                <div className="mobile-icon">
-                    <button><Menu strokeWidth={1.6} /></button>
-                </div>
+                <button className='hamburger-icon' onClick={() => setHamburger(!hamburger)}>
+                    {!hamburger ? <Menu /> :
+
+                        <div className="fade">
+                            <div className="top-header">
+                                <div className="logo"> <a href="/">
+                                    <img src="https://www.byd.com/static_material/byd/overseas/public-icon/logo.svg" alt="HYD Logo" />
+                                </a></div>
+                                <div className='close'>
+                                    <X />
+                                </div>
+                            </div>
+                            <div>
+                                <MobileLinks />
+                                <div className='footer-links'>
+                                    <a href="/">MMC</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </button>
+
             </nav>
         </>
     )
