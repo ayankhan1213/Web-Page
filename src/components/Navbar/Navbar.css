@@ -1,5 +1,6 @@
 .navbar {
-    position: sticky;
+    width: 100vw;
+    position: absolute;
     top: 0;
     min-height: 3.5em;
     background-color: #0000005c;
@@ -89,10 +90,12 @@
     .navbar .hamburger-icon {
         display: block;
     }
-    .user-icon a{
+
+    .user-icon a {
         display: flex;
         gap: 6px;
     }
+
     .top-header {
         display: flex;
         gap: 15em;
@@ -115,5 +118,18 @@
 
     }
 
+
+}
+
+@media (max-width:575px) {
+    .fade {
+        width: 100vw;
+    }
+     .top-header{
+        display: flex;
+        justify-content: space-between;
+        padding: 1em 1.4em;
+      
+     }
 
 }

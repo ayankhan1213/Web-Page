@@ -1,13 +1,36 @@
+/* 1. video-section ko relative karo */
 .video-section {
     width: 100vw;
-    height: 100vh; 
-    margin-top: 0; 
+    height: 100vh;
     overflow: hidden;
-    position: absolute;
+    position: relative; /* absolute → relative */
 }
 
 .video-section video {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* 2. hero-bottom me width: 100% add karo */
+.hero-bottom {
+    position: absolute;
+    bottom: 3em;
+    padding: 0 3em;
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* ← yeh missing tha */
+    box-sizing: border-box; /* padding count karne ke liye */
+}
+
+.hero-bottom h2 {
+    font-size: 40px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.hero-bottom p {
+    font-size: 15px;
+    font-weight: 300;
+    color: #fff;
 }
