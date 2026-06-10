@@ -3,7 +3,8 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    position: relative; /* absolute → relative */
+    position: relative;
+    /* absolute → relative */
 }
 
 .video-section video {
@@ -19,8 +20,8 @@
     padding: 0 3em;
     display: flex;
     justify-content: space-between;
-    width: 100%; /* ← yeh missing tha */
-    box-sizing: border-box; /* padding count karne ke liye */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .hero-bottom h2 {
@@ -33,4 +34,93 @@
     font-size: 15px;
     font-weight: 300;
     color: #fff;
+}
+
+.duo {
+    display: flex;
+    gap: 1em;
+}
+
+.duo button {
+    border-radius: 5px;
+    padding: 0.6em 3em;
+    background-color: transparent;
+    text-transform: uppercase;
+    border: 2px solid white;
+    color: #fff;
+}
+
+.hero-bottom button:hover {
+    background-color: white;
+    color: black;
+}
+
+.bookNow {
+    position: relative;
+    left: 24em;
+    margin-top: 6px;
+    padding: 0.6em 2em;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    text-transform: uppercase;
+}
+
+@media (max-width:1100px) {
+    .hero-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bookNow {
+        left: 14em;
+    }
+
+    .hero-bottom p {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .hero-bottom h2 {
+        font-size: 50px;
+        font-weight: 600;
+    }
+
+}
+
+
+
+@media (max-width:580px) {
+    .duo button {
+        padding: 0.5em 2em;
+    }
+
+    .bookNow {
+        left: 12em;
+    }
+
+    .hero-bottom h2 {
+        text-align: center;
+        font-size: 40px;
+    }
+
+}
+
+@media (max-width:420px) {
+    .bookNow {
+        left: 6em;
+    }
+    .duo button{
+        padding: 0.4em 1em;
+        white-space: nowrap;
+    }
+
+    .hero-bottom h2 {
+        text-align: center;
+        font-size: 33px;
+    }
+    .bookNow{
+        display: none;
+    }
+
 }

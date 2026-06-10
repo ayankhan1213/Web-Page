@@ -16,11 +16,13 @@ const Hero = () => {
         </div>
 
         <div className="heroLeftPart">
-            <div className="duo">
-              <Button text="Express your Interest" />
-              <Button text="Book a test Drive" />
-            </div>
-            <Button text="Book now" />
+          <div className="duo">
+            <Button text="Express your Interest" />
+            <Button text="Book a test Drive" />
+          </div>
+          <div>
+            <Button className="bookNow" text="Book now" />
+          </div>
         </div>
       </div>
     </>
